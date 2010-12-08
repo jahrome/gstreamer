@@ -95,6 +95,7 @@
 #ifdef HAVE_DLFCN_H
 #  include <dlfcn.h>
 #endif
+#undef HAVE_PRINTF_EXTENSION
 #ifdef HAVE_PRINTF_EXTENSION
 #  include <printf.h>
 #endif

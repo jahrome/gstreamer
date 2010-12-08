@@ -174,7 +174,7 @@
 #define HAVE_PRETTY_FUNCTION 1
 
 /* Defined if we have register_printf_function () */
-#undef HAVE_PRINTF_EXTENSION 1
+#undef HAVE_PRINTF_EXTENSION
 
 /* Define to 1 if you have the <process.h> header file. */
 /* #undef HAVE_PROCESS_H */
@@ -192,7 +192,7 @@
 #define HAVE_STDINT_H 1
 
 /* Define to 1 if you have the <stdio_ext.h> header file. */
-//#define HAVE_STDIO_EXT_H 1
+#undef HAVE_STDIO_EXT_H
 
 /* Define to 1 if you have the <stdlib.h> header file. */
 #define HAVE_STDLIB_H 1
@@ -312,3 +312,5 @@
 #ifndef __cplusplus
 /* #undef inline */
 #endif
+
+#define GST_PLUGIN_SCANNER_INSTALLED "/usr/local/libexec/gstreamer-0.10/gst-plugin-scanner"

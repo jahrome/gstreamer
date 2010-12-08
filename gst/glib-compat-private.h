@@ -11,7 +11,7 @@
 G_BEGIN_DECLS
 
 #if !GLIB_CHECK_VERSION(2,25,0)
-typedef struct stat GStatBuf;
+//typedef struct stat GStatBuf;
 #endif
 
 /* copies */

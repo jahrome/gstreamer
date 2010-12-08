@@ -8,6 +8,7 @@ LOCAL_SRC_FILES:= 		\
 	gstelements.c		\
 	gstfilesrc.c		\
 	gstqueue.c		\
+	gstqueue2.c		\
 	gstcapsfilter.c	 	\
 	gstfakesrc.c		\
 	gstfakesink.c	   	\

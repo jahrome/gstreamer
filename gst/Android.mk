@@ -24,6 +24,10 @@ LOCAL_SRC_FILES:= 			\
     gstobject.c        			\
     gstbin.c        			\
     gstbuffer.c        			\
+    gstbufferlist.c    			\
+    gstregistrychunks.c			\
+    gsttaskpool.c			\
+    gstdatetime.c      			\
     gstbus.c        			\
     gstcaps.c        			\
     gstchildproxy.c        		\
@@ -47,6 +51,7 @@ LOCAL_SRC_FILES:= 			\
     gstparamspecs.c        		\
     gstpipeline.c        		\
     gstplugin.c        			\
+    gstpluginloader.c        			\
     gstpluginfeature.c    		\
     gstpoll.c        			\
     gstpreset.c          		\
@@ -103,4 +108,5 @@ LOCAL_CFLAGS := \
     -DGST_DISABLE_DEPRECATED                        \
     -DHAVE_CONFIG_H            
 
+LOCAL_PRELINK_MODULE := false
 include $(BUILD_SHARED_LIBRARY)

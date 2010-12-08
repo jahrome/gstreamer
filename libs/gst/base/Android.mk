@@ -5,14 +5,17 @@ include $(CLEAR_VARS)
 GST_MAJORMINOR:= 0.10
 
 LOCAL_SRC_FILES:= \
-    gstadapter.c		\
-    gstbasesink.c		\
-    gstbasesrc.c		\
+    gstadapter.c	\
+    gstbasesink.c	\
+    gstbasesrc.c	\
     gstbasetransform.c	\
+    gstbitreader.c	\
+    gstbytereader.c	\
+    gstbytewriter.c	\
     gstcollectpads.c	\
-    gstpushsrc.c		\
-    gsttypefindhelper.c	\
-    gstdataqueue.c
+    gstdataqueue.c	\
+    gstpushsrc.c	\
+    gsttypefindhelper.c	
 
 LOCAL_SHARED_LIBRARIES := \
     libgstreamer-0.10       \
@@ -42,4 +45,5 @@ LOCAL_C_INCLUDES := 			\
 LOCAL_CFLAGS := \
     -DHAVE_CONFIG_H			
 
+LOCAL_PRELINK_MODULE := false
 include $(BUILD_SHARED_LIBRARY)
