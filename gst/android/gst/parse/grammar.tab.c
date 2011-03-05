@@ -280,14 +280,14 @@ SET_ERROR (GError **error, gint type, const char *format, ...)
 
 #  ifdef G_HAVE_ISO_VARARGS
 
-/* #  define YYFPRINTF(a, ...) GST_CAT_DEBUG (GST_CAT_PIPELINE, __VA_ARGS__) */
-#    define YYFPRINTF(a, ...) \
+#  define YYFPRINTF(a, ...) GST_CAT_DEBUG (GST_CAT_PIPELINE, __VA_ARGS__)
+/*#    define YYFPRINTF(a, ...) \
 G_STMT_START { \
      gchar *temp = g_strdup_printf (__VA_ARGS__); \
      GST_CAT_LOG (GST_CAT_PIPELINE, temp); \
      g_free (temp); \
 } G_STMT_END
-
+*/
 #  elif defined(G_HAVE_GNUC_VARARGS)
 
 #    define YYFPRINTF(a, args...) \
@@ -1285,7 +1285,7 @@ yy_symbol_print (yyoutput, yytype, yyvaluep, scanner, graph)
 #endif
 {
   if (yytype < YYNTOKENS)
-    YYFPRINTF (yyoutput, "token %s (", yytname[yytype]);
+    YYFPRINTF (yyoutput, "token %s (", (char*)yytname[yytype]);
   else
     YYFPRINTF (yyoutput, "nterm %s (", yytname[yytype]);
 
